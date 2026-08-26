@@ -1,0 +1,1648 @@
+/* =========================================
+   MUHAMMAD RIZWAN RAZZI WEBSITE
+   MAIN STYLE SHEET
+========================================= */
+
+:root {
+    --bg: #0b0d0d;
+    --bg-soft: #111514;
+    --card: #151918;
+    --gold: #c9a45c;
+    --gold-light: #e1c47b;
+    --white: #f5f2ea;
+    --text: #d6d1c6;
+    --muted: #929087;
+    --border: rgba(201, 164, 92, 0.22);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(circle at 80% 10%, rgba(201, 164, 92, 0.08), transparent 25%),
+        var(--bg);
+
+    color: var(--text);
+
+    font-family: "Noto Naskh Arabic", serif;
+
+    min-height: 100vh;
+
+    line-height: 1.9;
+}
+
+body.ltr {
+    direction: ltr;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 20px 5%;
+
+    transition:
+        0.45s ease,
+        transform 0.45s ease;
+}
+
+
+.header.scrolled {
+    padding: 12px 6%;
+
+}
+
+
+.header-inner {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    min-height: 72px;
+
+    padding: 10px 18px;
+
+    border: 1px solid transparent;
+
+    transition: 0.4s ease;
+}
+
+
+.header.scrolled .header-inner {
+
+    background: rgba(17, 21, 20, 0.92);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* LOGO */
+
+.logo-box {
+    width: 75px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.logo-box img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* NAV */
+
+.navbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 32px;
+
+    flex: 1;
+}
+
+.nav-link {
+    position: relative;
+
+    font-size: 17px;
+
+    color: var(--text);
+
+    transition: 0.3s ease;
+
+    white-space: nowrap;
+}
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -7px;
+
+    right: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold-light);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* LANGUAGE BUTTON */
+
+.language-btn {
+    border: 1px solid var(--border);
+
+    background: rgba(201, 164, 92, 0.08);
+
+    color: var(--gold-light);
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    white-space: nowrap;
+}
+
+.language-btn:hover {
+    background: var(--gold);
+
+    color: #111;
+
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+.menu-toggle {
+    display: none;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--gold);
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 150px 5% 90px;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-label {
+    color: var(--gold);
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 7vw, 90px);
+
+    color: var(--white);
+
+    line-height: 1.25;
+
+    margin: 12px 0 0;
+
+    font-weight: 700;
+}
+
+.hero h2 {
+    color: var(--gold);
+
+    font-size: 30px;
+
+    margin: 5px 0 20px;
+}
+
+.hero p {
+    color: var(--muted);
+
+    font-size: 18px;
+
+    max-width: 620px;
+
+    margin-bottom: 32px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn,
+.outline-btn,
+.book-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 40px;
+
+    padding: 11px 24px;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: var(--gold);
+
+    color: #101211;
+
+    border: 1px solid var(--gold);
+}
+
+.primary-btn:hover {
+    background: var(--gold-light);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(201, 164, 92, 0.2);
+}
+
+.secondary-btn {
+    border: 1px solid var(--border);
+
+    color: var(--gold-light);
+}
+
+.secondary-btn:hover {
+    background: rgba(201, 164, 92, 0.1);
+
+    transform: translateY(-4px);
+}
+
+.outline-btn {
+    border: 1px solid var(--gold);
+
+    color: var(--gold-light);
+
+    margin-top: 25px;
+}
+
+.outline-btn:hover {
+    background: var(--gold);
+
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.hero-visual {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.image-frame {
+    width: min(420px, 90vw);
+
+    height: 500px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.image-frame img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 78%;
+
+    height: 90%;
+
+    object-fit: cover;
+
+    border-radius: 220px 220px 30px 30px;
+
+    border: 1px solid var(--border);
+
+    filter: saturate(0.85);
+
+    box-shadow: var(--shadow);
+
+    transition: 0.5s ease;
+}
+
+.image-frame:hover img {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.gold-circle {
+    position: absolute;
+
+    width: 360px;
+
+    height: 360px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(201, 164, 92, 0.35);
+
+    box-shadow:
+        0 0 0 25px rgba(201, 164, 92, 0.03),
+        0 0 0 50px rgba(201, 164, 92, 0.02);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro-section {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 90px 5%;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto auto 55px;
+}
+
+.section-heading > span {
+    color: var(--gold);
+
+    font-size: 16px;
+}
+
+.section-heading h2 {
+    font-size: 44px;
+
+    color: var(--white);
+
+    margin: 5px 0 10px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.intro-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.info-card {
+    position: relative;
+
+    padding: 35px 30px;
+
+    min-height: 240px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.035),
+        rgba(255,255,255,0.01)
+    );
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(201, 164, 92, 0.5);
+}
+
+.card-number {
+    color: rgba(201, 164, 92, 0.4);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    direction: ltr;
+
+    display: block;
+}
+
+.info-card h3 {
+    color: var(--gold-light);
+
+    font-size: 26px;
+}
+
+.info-card p {
+    color: var(--muted);
+}
+
+
+/* =========================================
+   FEATURED
+========================================= */
+
+.featured-section {
+    max-width: 1250px;
+
+    margin: 40px auto 100px;
+
+    padding: 70px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.featured-content h2 {
+    font-size: 45px;
+
+    color: var(--white);
+
+    line-height: 1.4;
+
+    margin: 10px 0;
+}
+
+.featured-content p {
+    color: var(--muted);
+
+    max-width: 550px;
+}
+
+.book-preview {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 330px;
+
+    position: relative;
+}
+
+.mini-book {
+    width: 150px;
+
+    height: 220px;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transform: rotate(-9deg);
+
+    transition: 0.4s ease;
+}
+
+.mini-book.second {
+    transform: rotate(0deg) translateY(-20px);
+
+    z-index: 2;
+}
+
+.mini-book.third {
+    transform: rotate(9deg);
+
+    z-index: 1;
+}
+
+.mini-book:hover {
+    transform: translateY(-12px) rotate(0);
+    z-index: 5;
+}
+
+.mini-book img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.page-title {
+    padding: 170px 5% 70px;
+
+    text-align: center;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.page-title span {
+    color: var(--gold);
+}
+
+.page-title h1 {
+    color: var(--white);
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   WRITER PAGE
+========================================= */
+
+.writer-section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 40px 5% 110px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.writer-text h2 {
+    font-size: 45px;
+
+    color: var(--white);
+
+    margin: 10px 0 20px;
+}
+
+.writer-text p {
+    color: var(--muted);
+
+    font-size: 18px;
+
+    margin-bottom: 18px;
+}
+
+.writer-image {
+    display: flex;
+
+    justify-content: center;
+}
+
+.portrait-frame {
+    width: 360px;
+
+    height: 460px;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    position: relative;
+}
+
+.portrait-frame img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.portrait-decoration {
+    position: absolute;
+
+    width: 70px;
+
+    height: 70px;
+
+    border-top: 2px solid var(--gold);
+
+    border-right: 2px solid var(--gold);
+
+    top: -10px;
+
+    right: -10px;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   BOOKS
+========================================= */
+
+.books-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px 5% 110px;
+}
+
+.books-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.book-card {
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    background: rgba(255,255,255,0.025);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    transition: 0.4s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(201, 164, 92, 0.5);
+}
+
+.book-cover {
+    height: 270px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #171918;
+
+    box-shadow: var(--shadow);
+}
+
+.book-cover img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.book-card:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+.book-number {
+    color: rgba(201, 164, 92, 0.5);
+
+    font-family: "Playfair Display", serif;
+
+    direction: ltr;
+
+    display: block;
+}
+
+.book-info h2 {
+    color: var(--white);
+
+    font-size: 29px;
+
+    margin-top: 2px;
+}
+
+.book-info h3 {
+    color: var(--gold);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+
+    direction: ltr;
+
+    text-align: right;
+
+    margin: 5px 0;
+}
+
+.book-info p {
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+.book-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.book-btn {
+    border: 1px solid var(--gold);
+
+    color: var(--gold-light);
+
+    padding: 7px 13px;
+
+    font-size: 14px;
+}
+
+.book-btn:hover {
+    background: var(--gold);
+
+    color: #111;
+}
+
+.book-btn.dark {
+    background: rgba(201,164,92,0.08);
+}
+
+
+/* =========================================
+   POETRY
+========================================= */
+
+.poetry-section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 20px 5% 110px;
+}
+
+.poetry-intro {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.poetry-intro h2 {
+    color: var(--white);
+
+    font-size: 40px;
+
+    margin-top: 8px;
+}
+
+.poetry-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.poetry-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 45px 30px 30px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201,164,92,0.06),
+            transparent
+        );
+
+    border-radius: 24px;
+
+    transition: 0.4s ease;
+}
+
+.poetry-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(201,164,92,0.5);
+}
+
+.poetry-mark {
+    position: absolute;
+
+    top: 10px;
+
+    left: 20px;
+
+    font-size: 70px;
+
+    color: rgba(201,164,92,0.2);
+
+    font-family: Georgia, serif;
+
+    direction: ltr;
+}
+
+.poetry-type {
+    color: var(--gold);
+
+    font-size: 15px;
+}
+
+.poetry-text {
+    margin-top: 25px;
+
+    color: var(--white);
+
+    font-size: 20px;
+
+    line-height: 2.2;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 20px 5% 110px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+.contact-info h2 {
+    color: var(--white);
+
+    font-size: 42px;
+
+    margin: 10px 0;
+}
+
+.contact-info > p {
+    color: var(--muted);
+
+    font-size: 18px;
+}
+
+.contact-detail {
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top: 15px;
+}
+
+.contact-detail strong {
+    color: var(--gold);
+}
+
+.contact-detail span {
+    color: var(--text);
+
+    direction: ltr;
+
+    text-align: right;
+}
+
+
+/* FORM */
+
+.contact-form {
+    padding: 35px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    background: rgba(255,255,255,0.025);
+}
+
+.contact-form label {
+    display: block;
+
+    color: var(--gold-light);
+
+    margin-bottom: 5px;
+
+    margin-top: 15px;
+}
+
+.contact-form label:first-child {
+    margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    background: #0c0f0e;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 13px 15px;
+
+    color: var(--white);
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+}
+
+.contact-form .primary-btn {
+    margin-top: 20px;
+
+    border: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #070909;
+
+    border-top: 1px solid var(--border);
+
+    padding: 70px 5% 20px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+
+    gap: 60px;
+}
+
+.footer-logo {
+    width: 50px;
+
+    height: 30px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+}
+
+.footer-about p,
+.footer-contact p {
+    color: var(--muted);
+
+    max-width: 330px;
+}
+
+.footer h3 {
+    color: var(--gold-light);
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.footer-links a {
+    color: var(--muted);
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    transform: translateX(-4px);
+}
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+
+    color: #686861;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        position: fixed;
+
+        top: 90px;
+
+        right: 5%;
+
+        left: 5%;
+
+        display: none;
+
+        flex-direction: column;
+
+        background: rgba(15,18,17,0.98);
+
+        backdrop-filter: blur(20px);
+
+        border: 1px solid var(--border);
+
+        border-radius: 22px;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .language-btn {
+        margin-right: auto;
+    }
+
+    .header-inner {
+        gap: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 140px;
+
+        gap: 40px;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .image-frame {
+        height: 400px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-section {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .featured-content p {
+        margin: auto;
+    }
+
+    .writer-section,
+    .contact-section {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .writer-text {
+        text-align: center;
+    }
+
+    .writer-image {
+        order: -1;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .poetry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        text-align: center;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .footer-links a:hover {
+        transform: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 10px 3%;
+    }
+
+    .header-inner {
+        min-height: 60px;
+    }
+
+    .logo-box {
+        width: 60px;
+        height: 48px;
+    }
+
+    .language-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .image-frame {
+        height: 350px;
+    }
+
+    .gold-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .section-heading h2,
+    .featured-content h2,
+    .writer-text h2,
+    .contact-info h2 {
+        font-size: 34px;
+    }
+
+    .book-card {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .book-cover {
+        width: 190px;
+
+        margin: auto;
+    }
+
+    .book-info h3 {
+        text-align: center;
+    }
+
+    .book-buttons {
+        justify-content: center;
+    }
+
+    .portrait-frame {
+        width: 290px;
+
+        height: 380px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
+/* CSS CONNECTION TEST */
+body {
+    background: #0b0d0d !important;
+}
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+footer img {
+    width: 100px !important;
+    max-width: 100px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+/* =========================================
+   HIDE OLD PLACEHOLDER POETRY CARDS
+   Old HTML/CSS remains untouched
+========================================= */
+
+.poetry-section .poetry-grid {
+    display: none;
+}
+
+
+/* =========================================
+   POETRY IMAGE GALLERY
+========================================= */
+
+.poetry-gallery {
+    width: 100%;
+    padding: 100px 7% 120px;
+    background: #080a0a;
+    box-sizing: border-box;
+}
+
+
+/* Heading */
+
+.poetry-gallery-heading {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.poetry-gallery-heading span {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    color: #d5a84c;
+
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.poetry-gallery-heading h2 {
+    margin: 0 0 18px;
+
+    color: #f4f0e8;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+}
+
+.poetry-gallery-heading p {
+    margin: 0;
+
+    color: #aaa49a;
+
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   12 IMAGE CARDS
+========================================= */
+
+.poetry-image-grid {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* Individual Card */
+
+.poetry-image-card {
+    position: relative;
+
+    width: 100%;
+    height: 360px;
+
+    overflow: hidden;
+
+    background: #101211;
+
+    border: 1px solid rgba(213, 168, 76, 0.35);
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+/* Image */
+
+.poetry-image-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+
+/* Dark overlay */
+
+.poetry-image-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.45)
+    );
+
+    pointer-events: none;
+
+    transition: opacity 0.5s ease;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.poetry-image-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #d5a84c;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.65),
+        0 0 25px rgba(213, 168, 76, 0.12);
+}
+
+
+.poetry-image-card:hover img {
+    transform: scale(1.08);
+
+    filter: brightness(1.08) contrast(1.05);
+}
+
+
+.poetry-image-card:hover::after {
+    opacity: 0.15;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .poetry-image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .poetry-image-card {
+        height: 330px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .poetry-gallery {
+        padding: 75px 5% 90px;
+    }
+
+    .poetry-image-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .poetry-image-card {
+        height: 380px;
+    }
+
+}
