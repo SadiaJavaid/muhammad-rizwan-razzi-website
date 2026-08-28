@@ -1646,3 +1646,365 @@ footer img {
     }
 
 }
+/* =========================================
+   EXTRA MOBILE RESPONSIVE FIX
+   Existing CSS untouched
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Prevent horizontal scrolling */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .header {
+        width: 100%;
+        padding: 8px 3%;
+    }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        width: 75px;
+        max-width: 75px;
+        height: auto;
+    }
+
+    .language-btn {
+        margin-right: 0;
+        margin-left: auto;
+        padding: 6px 11px;
+        font-size: 12px;
+    }
+
+    .menu-toggle {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 19px;
+    }
+
+    /* MOBILE NAVIGATION */
+    .navbar {
+        right: 3%;
+        left: 3%;
+        top: 75px;
+        width: auto;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* =========================================
+       HOME HERO
+    ========================================= */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        padding: 125px 6% 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .small-label {
+        text-align: center;
+    }
+
+    .hero h1 {
+        width: 100%;
+        font-size: 42px;
+        line-height: 1.35;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .hero h2 {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .hero p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 2;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+
+    /* HERO IMAGE */
+    .hero-visual {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: -1;
+    }
+
+    .image-frame {
+        width: min(330px, 85vw);
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .image-frame img {
+        width: 78%;
+        height: 90%;
+    }
+
+    .gold-circle {
+        width: 270px;
+        height: 270px;
+    }
+
+
+    /* =========================================
+       INTRODUCTION
+    ========================================= */
+
+    .intro-section {
+        width: 100%;
+        max-width: 100%;
+        padding: 65px 6%;
+    }
+
+    .section-heading {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+        line-height: 1.5;
+    }
+
+    .section-heading p {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .intro-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .info-card {
+        width: 100%;
+        min-height: auto;
+        padding: 28px 22px;
+        text-align: center;
+    }
+
+    .card-number {
+        text-align: center;
+    }
+
+    .info-card h3 {
+        font-size: 25px;
+    }
+
+    .info-card p {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+
+    /* =========================================
+       FEATURED BOOKS
+    ========================================= */
+
+    .featured-section {
+        width: 100%;
+        max-width: 100%;
+        margin: 25px auto 70px;
+        padding: 55px 6%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .featured-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-content h2 {
+        font-size: 32px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .featured-content p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .outline-btn {
+        margin-top: 20px;
+    }
+
+    .book-preview {
+        width: 100%;
+        min-height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mini-book {
+        width: 105px;
+        height: 165px;
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    .footer {
+        width: 100%;
+        padding: 55px 6% 20px;
+    }
+
+    .footer-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+    }
+
+    .copyright {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        max-width: 230px;
+    }
+
+    .image-frame {
+        width: 290px;
+        height: 320px;
+    }
+
+    .gold-circle {
+        width: 245px;
+        height: 245px;
+    }
+
+    .mini-book {
+        width: 90px;
+        height: 145px;
+    }
+}
